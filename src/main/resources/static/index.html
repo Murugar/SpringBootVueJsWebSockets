@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Spring Boot Vuejs WebSockets</title>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <div id="app" class="container">
+      <br/>
+      <h1 class="text-primary">Spring Boot Vue WebSockets</h1>
+      <table class="table table-bordered">
+        <thead class="text-danger">
+          <tr>
+            <th>Value A</th>
+            <th>Value B</th>
+            <th>Value C</th>
+            <th>Value D</th>
+            <th>Value E</th>
+            <th>Value F</th>
+            <th>Value G</th>
+            <th>Value H</th>
+            <th>Value I</th>
+          </tr>
+        </thead>
+        <tbody class="bg-primary text-warning">
+          <tr
+            v-for="m in valuesList"
+            >
+            <td>{{ m.valueA }}</td>
+            <td>{{ m.valueB }}</td>
+            <td>{{ m.valueC }}</td>
+            <td>{{ m.valueD }}</td>
+            <td>{{ m.valueE }}</td>
+            <td>{{ m.valueF }}</td>
+            <td>{{ m.valueG }}</td>
+            <td>{{ m.valueH }}</td>
+            <td>{{ m.valueI }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Bootstrap 4 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+    <!-- Websockets -->
+    <script src="https://cdn.jsdelivr.net/sockjs/1/sockjs.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+    <script src="https://unpkg.com/vue"></script>
+
+    <!-- Websocket handling -->
+    <script src="ws.js"></script>
+  </body>
+</html>
